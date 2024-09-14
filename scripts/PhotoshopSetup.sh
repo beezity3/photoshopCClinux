@@ -96,7 +96,7 @@ function replacement() {
 function install_photoshopSE() {
     local filename="photoshopCC-V19.1.6-2018x64.tgz"
     local filemd5="b63f6ed690343ee12b6195424f94c33f"
-    local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/photoshopCC-V19.1.6-2018x64.tgz"
+    local filelink="https://mega.nz/1d4b1ad8-9af8-4b95-8896-07c0d5fd72d3"
     # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
