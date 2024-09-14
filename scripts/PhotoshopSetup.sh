@@ -107,7 +107,6 @@ function install_photoshopSE() {
 
     echo "===============| photoshop CC v19 |===============" >> "$SCR_PATH/wine-error.log"
     show_message "install photoshop..."
-    show_message "\033[1;33mPlease don't change default Destination Folder\e[0m"
 
     wine64 "$RESOURCES_PATH/photoshopCC/photoshop_cc.exe" &>> "$SCR_PATH/wine-error.log" || error "sorry something went wrong during photoshop installation"
     
