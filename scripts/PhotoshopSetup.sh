@@ -13,7 +13,7 @@ function main() {
     #make sure wine and winetricks package is already installed
     package_installed wine
     package_installed wine64
-    package_installed md5sum
+    # package_installed md5sum
     package_installed winetricks
 
     RESOURCES_PATH="$SCR_PATH/resources"
@@ -71,11 +71,10 @@ function main() {
 
 function replacement() {
     local filename="replacement.tgz"
-    local filemd5="6441a8e77c082897a99c2b7b588c9ac4"
-    local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/replacement.tgz"
+    local filelink="https://mega.nz/46142202-060f-4290-8b3a-fc18bb757fea
     local filepath="$CACHE_PATH/$filename"
 
-    download_component $filepath $filemd5 $filelink $filename
+    download_component $filepath $filelink $filename
 
     mkdir "$RESOURCES_PATH/replacement"
     show_message "extract replacement component..."
@@ -90,17 +89,17 @@ function replacement() {
     done
 
     show_message "replace component compeleted..."
-    unset filename filemd5 filelink filepath
+    unset filename filelink filepath
 }
 
 function install_photoshopSE() {
     local filename="photoshopCC-V19.1.6-2018x64.tgz"
-    local filemd5="b63f6ed690343ee12b6195424f94c33f"
+  #  local filemd5="b63f6ed690343ee12b6195424f94c33f"
     local filelink="https://mega.nz/1d4b1ad8-9af8-4b95-8896-07c0d5fd72d3"
     # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
-    download_component $filepath $filemd5 $filelink $filename
+    download_component $filepath $filelink $filename
 
     mkdir "$RESOURCES_PATH/photoshopCC"
     show_message "extract photoshop..."
@@ -117,7 +116,7 @@ function install_photoshopSE() {
 
     notify-send "Photoshop CC" "photoshop installed successfully" -i "photoshop"
     show_message "photoshopCC V19 x64 installed..."
-    unset filename filemd5 filelink filepath
+    unset filename filelink filepath
 }
 
 check_arg $@
